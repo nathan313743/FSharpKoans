@@ -68,7 +68,7 @@ module ``about let`` =
         let mutable x = 100
         x <- 200
 
-        AssertEquality x __
+        AssertEquality x 200
 
     [<Koan>]
     let YouCannotModifyALetBoundValueIfItIsNotMutable() =
@@ -76,10 +76,10 @@ module ``about let`` =
 
         //What happens if you uncomment the following?
         //
-        //x <- 100
+        // x <- 100
 
         //NOTE: Although you can't modify immutable values, it is possible
         //      to reuse the name of a value in some cases using "shadowing".
         let x = 100
 
-        AssertEquality x __
+        AssertEquality x 100
